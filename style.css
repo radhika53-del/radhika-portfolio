@@ -1,0 +1,430 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --bg-color:#080808;
+    --second-bg-color:#131313;
+    --text-color:white;
+    --main-color:#00ffee;
+}
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+}
+body{
+    background:var(--bg-color);
+    color: var(--text-color);
+}
+.header{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 4rem 12%  4rem;
+    background:rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+.logo{
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease ; 
+}
+.logo:hover{
+    transform: scale(1.2);
+}
+.logo span{
+    text-shadow:0 0 25px var(--main-color);
+}
+.nav a{
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight:500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+
+}
+.nav a:hover,
+.nav a.active{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+#menu{
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 12% 10rem;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+}
+.home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
+    margin-top: 3rem;
+}
+span{
+    color: var(--main-color);
+}
+.home-content h3{
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.5rem;
+}
+.home-content h1{
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+.home-img{
+    border-radius: 50%;
+}
+.home-img img{
+    position:relative;
+    top: 3rem;
+    width:32vw;
+    border-radius: 50%;
+    box-shadow:  0 0 25px var(--main-color);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.home-img img:hover{
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
+}
+.home-content p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 1000px;
+}
+.social-icons a{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem  1.5rem 3rem 0;
+    transition: 0.3s ease-in-out ;
+}
+.social-icons a:hover{
+    color:var(--main-color);
+    transform: scale(1.3) translate(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background :var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: black;
+    border:2px solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+.btn-group{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.btn-group a:nth-of-type(2){
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+     box-shadow: 0 0 25px transparent;   
+     background-color: #00ffee;
+     color: black;
+    font: 200;
+
+}
+.btn-group a:nth-of-type(2):hover{
+    box-shadow: 0 0 25px var(--main-color);
+    
+}
+.text-animation {
+  font-size: 3.5rem;     
+  font-weight: 500;
+  color: white;            
+  white-space: nowrap;    
+}
+
+.text-animation .typing {
+  color: var(--main-color);                
+  border-right: 3px solid var(--main-color); 
+  display: inline-block;
+  overflow: hidden;
+  width: 0ch;
+  font-size: 40px;
+
+  animation: typing 2.5s steps(13) 0s forwards,
+             blink 0.5s step-end infinite,
+             erase 2.5s steps(13) 3s forwards;
+  animation-iteration-count: infinite;
+}
+
+/* typing animation */
+@keyframes typing {
+  from { width: 13ch; }
+  to { width: 0ch; } 
+}
+
+/* erasing animation */
+@keyframes erase {
+  from { width: 0ch; }
+  to { width: 13ch; }
+}
+
+/* blinking cursor */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.heading{
+    font-size: 8rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    text-shadow: 0 0 25px var(--main-color); /* Add a subtle glow to the heading */
+}
+
+.timeline-items{
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* The main glowing vertical line */
+.timeline-items::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: var(--main-color);
+    left: calc(50% - 1px);
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+.timeline-item{
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+
+/* Positions odd items (1st, 3rd, etc.) to the left */
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+/* Positions even items (2nd, 4th, etc.) to the right */
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+
+.timeline-date{
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.timeline-content{
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    padding: 20px;
+    border-radius: 20px;
+    /* Creates the neon-glow effect on the boxes */
+    box-shadow: 0 0 25px var(--main-color); 
+    transition: 0.3s ease-in-out;
+}
+
+.timeline-content:hover{
+    transform: translateY(-5px);
+}
+
+.timeline-content h3{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+}
+
+.timeline-content p{
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+
+.timeline-dot{
+    height: 16px;
+    width: 16px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: calc(50% - 8px);
+    top: -5px;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    z-index: 1;
+}
+
+/* Positioning the date for odd-numbered items (left side) */
+.timeline-item:nth-child(odd) .timeline-date{
+    position: absolute;
+    right: calc(50% + 20px);
+    top: -10px;
+}
+
+/* Positioning the date for even-numbered items (right side) */
+.timeline-item:nth-child(even) .timeline-date{
+    position: absolute;
+    left: calc(50% + 20px);
+    top: -10px;
+}
+@media (max-width: 768px) {
+    .timeline-items::before {
+        left: 7px; 
+    }
+
+
+
+    .timeline-item {
+        margin-bottom: 30px;
+    }
+    
+    
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        padding-right: 0;
+        padding-left: 30px; 
+        text-align: left;
+    }
+
+    
+    .timeline-dot {
+        left: 0;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-date,
+    .timeline-item:nth-child(even) .timeline-date {
+        position: relative;
+        left: 0;
+        right: auto;
+        top: auto;
+    }
+
+    .heading {
+        font-size: 5rem;
+    }
+}
+/* ================== Contact Section Styles ================== */
+
+.contact{
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+
+.contact .heading{
+    margin-bottom: 7rem;
+}
+
+.contact form{
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--bg-color); /* Matches body background */
+    border-radius: 1rem;
+    margin: .8rem 0;
+    
+    /* Neon Border and Glow for Inputs */
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 15px var(--main-color);
+    transition: all 0.3s ease;
+}
+
+.contact form .input-box input:focus,
+.contact form textarea:focus{
+    box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
+}
+
+.contact form .input-box input{
+    width: 49%; /* Allows two inputs per row */
+}
+
+.contact form textarea{
+    resize: none;
+    margin-bottom: 2rem;
+}
+
+/* Style the button to match the form theme */
+.contact form .btn{
+    margin-top: 2rem;
+    cursor: pointer;
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 25px var(--main-color);
+    border: 2px solid transparent;
+}
+
+.contact form .btn:hover{
+    background: var(--bg-color);
+    color: var(--main-color);
+    border-color: var(--main-color);
+    box-shadow: 0 0 50px var(--main-color);
+    transform: scale(1.05);
+}
+
+/* Media Query for mobile adjustments */
+@media (max-width: 600px) {
+    .contact form .input-box input {
+        width: 100%;
+    }
+}
